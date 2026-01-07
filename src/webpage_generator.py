@@ -43,7 +43,6 @@ def generate_page_recursive(dir_path_content, template_path, dest_dir_path, base
             title = extract_title(from_text)
             new_text = template_text.replace("{{ Title }}", title)
             final_text = new_text.replace("{{ Content }}", from_html)
-            href_text = final_text.replace('href=/', f'href="{basepath}')
             href_text = final_text.replace('href="/', f'href="{basepath}')
             end_text = href_text.replace('src="/', f'src="{basepath}')
             open(final_dest, "w").write(f"{end_text}\n")
