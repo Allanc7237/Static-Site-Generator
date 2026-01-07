@@ -1,0 +1,1 @@
+python3 src/main.py "/https://github.com/Allanc7237/Static-Site-Generator/"
