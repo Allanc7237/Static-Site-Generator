@@ -15,10 +15,10 @@ class HTMLNode():
     
     def props_to_html(self):
         if self.props is None or self.props == {}:
-                return ""
+            return ""
         new_string = ""
-        for p in self.props:
-             new_string += f" {p}={self.props[p]}"
+        for p, v in self.props.items():
+            new_string += f' {p}="{v}"'
         return new_string
     
     def __repr__(self):
